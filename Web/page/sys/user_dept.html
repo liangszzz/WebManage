@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分配菜单</title>
+    <link rel="import" href="/WebManage/Web/page/common/import.html">
+    <script src="/WebManage/Web/static/js/sys/user_dept.js"></script>
+    <style>
+        #left {
+            margin-left: 5px;
+            width: 200px;
+            float: left;
+        }
+        #mid{
+            float: left;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+<div id="left">
+    <br>
+    <span>当前部门:&nbsp;&nbsp;</span><span id="current_dept"></span>
+    <br>
+    <br>
+    <span><button class="layui-btn layui-btn-primary layui-btn-xs" data-type="addDeptToUser">添加部门</button></span>
+    <br>
+    <br>
+    <ul id="select_tree">
+    </ul>
+</div>
+<div id="mid">
+    <table class="layui-hide" lay-filter="selected_table" id="selected_table"></table>
+</div>
+
+</body>
+</html>
+<script type="text/html" id="table_bar">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delDeptFromUser">删除</a>
+</script>

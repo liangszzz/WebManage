@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <script src="/WebManage/Web/static/js/sys/user.js"></script>
+</head>
+<body>
+<div class="layui-card">
+    <div class="layui-card-header">查询表单</div>
+    <div class="layui-card-body">
+        <form class="layui-form" id="search_form" onsubmit="return false">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">用户名名称</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="username" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <button class="layui-btn" lay-submit lay-filter="formSubmit">查询</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="btn_bar">
+    <button class="layui-btn" data-type="toAdd">新增</button>
+    <button class="layui-btn" data-type="delSelect">删除选中</button>
+</div>
+<table class="layui-hide" id="table" lay-filter="table"></table>
+
+<script type="text/html" id="table_bar">
+    <a class="layui-btn layui-btn-xs" lay-event="toDetail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="toEdit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="doDel">删除</a>
+    &nbsp;|
+    <a class="layui-btn layui-btn-xs" lay-event="depts">设置部门</a>
+    <a class="layui-btn layui-btn-xs" lay-event="roles">设置角色</a>
+
+</script>
+
+
+<script type="text/html" id="form_html">
+    <form class="layui-form" lay-filter="form_save" id="form_save">
+        <input type="hidden" name="roleId">
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-block">
+                <input type="text" name="username" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-block">
+                <input type="password" name="password" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">email</label>
+            <div class="layui-input-block">
+                <input type="text" name="email" lay-verify="" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">电话</label>
+            <div class="layui-input-block">
+                <input type="text" name="phone" lay-verify="" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">地址</label>
+            <div class="layui-input-block">
+                <textarea placeholder="" name="address" class="layui-textarea" lay-verify=""></textarea>
+            </div>
+        </div>
+    </form>
+</script>
+
+</body>
+</html>

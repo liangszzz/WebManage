@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>部门管理</title>
+    <script src="/WebManage/Web/static/js/sys/dept.js"></script>
+    <style>
+        .left_div {
+            background-color: #cfcfcf;
+            width: 400px;
+            height: 700px;
+            float: left;
+        }
+
+        .right_div {
+            width: 600px;
+            height: 700px;
+            float: left;
+            padding-left: 5px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="left_div">
+    <ul id="dept_tree">
+
+    </ul>
+</div>
+<div class="right_div">
+    <div class="btn_bar">
+        <button class="layui-btn" data-type="toAddChild">新增子节点</button>
+        <button class="layui-btn" data-type="toAddBrother">新增同级子节点</button>
+        <button class="layui-btn" data-type="toAddRoot">新增根节点</button>
+        <button class="layui-btn" data-type="delSelected">删除当前节点选中</button>
+    </div>
+    <br>
+    <br>
+
+    <form class="layui-form" lay-filter="form_save" id="form_save">
+        <input type="hidden" name="id">
+        <div class="layui-form-item">
+            <label class="layui-form-label">部门名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" autocomplete="off" class="layui-input" required>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">部门描述</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" name="desc" class="layui-textarea"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">父节点ID</label>
+            <div class="layui-input-block">
+                <input type="text" readonly name="parentId" autocomplete="off" class="layui-input" required>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="form">保存</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+</body>
+</html>

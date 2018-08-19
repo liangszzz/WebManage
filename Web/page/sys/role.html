@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色管理</title>
+    <script src="/WebManage/Web/static/js/sys/role.js"></script>
+</head>
+<body>
+<div class="layui-card">
+    <div class="layui-card-header">查询表单</div>
+    <div class="layui-card-body">
+        <form class="layui-form" id="search_form">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">角色名称</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="roleName" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">角色描述</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="roleDesc" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <button class="layui-btn" lay-submit lay-filter="formSubmit">查询</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="btn_bar">
+    <button class="layui-btn" data-type="toAdd">新增</button>
+    <button class="layui-btn" data-type="delSelect">删除选中</button>
+</div>
+<table class="layui-hide" id="table" lay-filter="table"></table>
+
+<script type="text/html" id="table_bar">
+    <a class="layui-btn layui-btn-xs" lay-event="toDetail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="toEdit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="doDel">删除</a>
+    <a class="layui-btn layui-btn-xs" lay-event="showMenus">分配权限</a>
+</script>
+
+<script type="text/html" id="form_html">
+    <form class="layui-form" lay-filter="form_save" id="form_save">
+        <input type="hidden" name="roleId">
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="roleName" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">角色描述</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" name="roleDesc" class="layui-textarea" lay-verify="required"></textarea>
+            </div>
+        </div>
+    </form>
+</script>
+
+</body>
+</html>

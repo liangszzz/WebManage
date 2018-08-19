@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分配菜单</title>
+    <link rel="import" href="/WebManage/Web/page/common/import.html">
+    <script src="/WebManage/Web/static/js/sys/role_menu.js"></script>
+    <style>
+        #left {
+            margin-left: 5px;
+            width: 200px;
+            float: left;
+        }
+        #mid{
+            float: left;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="left">
+    <br>
+    <span>&nbsp;&nbsp;<button class="layui-btn layui-btn-primary layui-btn-xs" data-type="addMenuToRole">添加权限</button>&nbsp;&nbsp;</span>
+    <br>
+    <br>
+    <ul id="select_tree">
+    </ul>
+</div>
+<div id="mid">
+    <form class="layui-form layui-form-pane" lay-filter="form_save" id="form_save" >
+        <div class="layui-form-item">
+            <label class="layui-form-label">菜单名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" autocomplete="off" class="layui-input" readonly="true">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">菜单地址</label>
+            <div class="layui-input-block">
+                <input type="text" name="url" autocomplete="off" class="layui-input" readonly="true">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">菜单描述</label>
+            <div class="layui-input-block">
+                <input type="text" name="desc" autocomplete="off" class="layui-input" readonly="true">
+            </div>
+        </div>
+    </form>
+    <br>
+    <table class="layui-hide" lay-filter="selected_table" id="selected_table"></table>
+</div>
+
+</body>
+</html>
+<script type="text/html" id="table_bar">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delMenuFromRole">删除</a>
+</script>

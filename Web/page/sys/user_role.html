@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分配菜单</title>
+    <link rel="import" href="/WebManage/Web/page/common/import.html">
+    <script src="/WebManage/Web/static/js/sys/user_role.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+<fieldset class="layui-elem-field">
+    <legend>已选择的角色</legend>
+    <div class="layui-field-box">
+        <table class="layui-hide" lay-filter="selected_table" id="selected_table"></table>
+    </div>
+</fieldset>
+<br>
+<br>
+<fieldset class="layui-elem-field">
+    <legend>所有角色</legend>
+    <div class="layui-field-box">
+        <table class="layui-hide" lay-filter="select_table" id="select_table"></table>
+    </div>
+</fieldset>
+
+
+
+</body>
+</html>
+<script type="text/html" id="select_table_bar">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="addRoleToUser">添加</a>
+</script>
+<script type="text/html" id="selected_table_bar">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delRoleFromUser">删除</a>
+</script>
