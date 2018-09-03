@@ -11,7 +11,6 @@ import java.util.List;
  */
 public class T1 {
 
-
     @Test
     public void Test0() {
         ListNode l1 = new ListNode(6);
