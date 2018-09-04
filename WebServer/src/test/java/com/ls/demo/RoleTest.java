@@ -17,32 +17,40 @@ import java.util.List;
 @SpringBootTest
 public class RoleTest {
 
-    private Gson gson=new Gson();
+    private Gson gson = new Gson();
     @Autowired
     private RoleRep roleRep;
 
     @Test
-    public void role1(){
+    public void role1() {
 
-        Role role=new Role();
+        Role role = new Role();
         role.setRoleName("role");
 
-        Page<Role> roleName = roleRep.findAll(Example.of(role, ExampleMatcher.matching().withMatcher("roleName", ExampleMatcher.GenericPropertyMatchers.contains())), PageRequest.of(1,10));
+        Page<Role> roleName = roleRep.findAll(Example.of(role, ExampleMatcher.matching().withMatcher("roleName", ExampleMatcher.GenericPropertyMatchers.contains())), PageRequest.of(1, 10));
         System.err.println(gson.toJson(roleName));
     }
 
 
     @Test
-    public void addRole(){
+    public void addRole() {
 
-        List<Role> roleList=new ArrayList<>();
+        List<Role> roleList = new ArrayList<>();
 
-        for (int i=0;i<100;i++){
-            Role role=new Role();
-            role.setRoleName("role_name_"+i);
-            role.setRoleDesc("role_desc_"+i);
+        for (int i = 0; i < 100; i++) {
+            Role role = new Role();
+            role.setRoleName("role_name_" + i);
+            role.setRoleDesc("role_desc_" + i);
             roleList.add(role);
         }
         roleRep.saveAll(roleList);
+    }
+
+    @Test
+    public void addRole2() {
+        Role role = new Role();
+        role.setRoleName("role_name_");
+        role.setRoleDesc("role_desc_");
+        roleRep.save(role);
     }
 }
