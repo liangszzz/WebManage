@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>角色管理</title>
+    <link rel="import" href="/WebManage/Web/page/common/import.html">
     <script src="/WebManage/Web/static/js/sys/role.js"></script>
 </head>
 <body>
@@ -48,13 +49,18 @@
         <div class="layui-form-item">
             <label class="layui-form-label">角色名称</label>
             <div class="layui-input-block">
-                <input type="text" name="roleName" lay-verify="required" autocomplete="off" class="layui-input">
+                <input type="text" name="roleName" autocomplete="off" class="layui-input" lay-verify="required">
             </div>
         </div>
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">角色描述</label>
             <div class="layui-input-block">
-                <textarea placeholder="请输入内容" name="roleDesc" class="layui-textarea" lay-verify="required"></textarea>
+                <textarea placeholder="请输入内容" name="roleDesc" class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="form">保存</button>
             </div>
         </div>
     </form>

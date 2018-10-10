@@ -9,7 +9,9 @@ $(function () {
                 if (json != null && json.code != 0) {
                     if(json.code==1){
                         layer.alert(json.msg);
-                        toLogin();
+                        setTimeout(function () {
+                            toLogin();
+                        },1000)
                     }
                     else {
                         layer.alert(json.msg);

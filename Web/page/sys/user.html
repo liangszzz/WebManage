@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>用户管理</title>
+    <link rel="import" href="/WebManage/Web/page/common/import.html">
     <script src="/WebManage/Web/static/js/sys/user.js"></script>
 </head>
 <body>
@@ -59,20 +60,20 @@
         <div class="layui-form-item">
             <label class="layui-form-label">email</label>
             <div class="layui-input-block">
-                <input type="text" name="email" lay-verify="" autocomplete="off" class="layui-input">
+                <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">电话</label>
             <div class="layui-input-block">
-                <input type="text" name="phone" lay-verify="" autocomplete="off" class="layui-input">
+                <input type="text" name="phone" lay-verify="phone" autocomplete="off" class="layui-input">
             </div>
         </div>
 
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">地址</label>
             <div class="layui-input-block">
-                <textarea placeholder="" name="address" class="layui-textarea" lay-verify=""></textarea>
+                <textarea placeholder="" name="address" class="layui-textarea"></textarea>
             </div>
         </div>
     </form>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>部门管理</title>
+    <link rel="import" href="/WebManage/Web/page/common/import.html">
     <script src="/WebManage/Web/static/js/sys/dept.js"></script>
     <style>
         .left_div {
@@ -42,20 +43,20 @@
         <div class="layui-form-item">
             <label class="layui-form-label">部门名称</label>
             <div class="layui-input-block">
-                <input type="text" name="name" autocomplete="off" class="layui-input" required>
+                <input type="text" name="name" placeholder="请输入部门名称" autocomplete="off" class="layui-input" lay-verify="required">
             </div>
         </div>
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">部门描述</label>
             <div class="layui-input-block">
-                <textarea placeholder="请输入内容" name="desc" class="layui-textarea"></textarea>
+                <textarea placeholder="请输入部门描述" name="desc" class="layui-textarea"></textarea>
             </div>
         </div>
 
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">父节点ID</label>
             <div class="layui-input-block">
-                <input type="text" readonly name="parentId" autocomplete="off" class="layui-input" required>
+                <input type="text" readonly name="parentId" class="layui-input" lay-verify="required">
             </div>
         </div>
 

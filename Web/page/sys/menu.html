@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>菜单管理</title>
+    <link rel="import" href="/WebManage/Web/page/common/import.html">
     <script src="/WebManage/Web/static/js/sys/menu.js"></script>
     <style>
         .left_div {
@@ -42,7 +43,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">菜单名称</label>
             <div class="layui-input-block">
-                <input type="text" name="name" autocomplete="off" class="layui-input" required>
+                <input type="text" name="name" autocomplete="off" class="layui-input" lay-verify="required">
             </div>
         </div>
 
@@ -62,14 +63,14 @@
         <div class="layui-form-item">
             <label class="layui-form-label">菜单地址</label>
             <div class="layui-input-block">
-                <input type="text" name="url" autocomplete="off" class="layui-input" required>
+                <input type="text" name="url" autocomplete="off" class="layui-input" lay-verify="required">
             </div>
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">菜单排序</label>
             <div class="layui-input-block">
-                <input type="text" name="sort" autocomplete="off" class="layui-input" required>
+                <input type="text" name="sort" autocomplete="off" class="layui-input" lay-verify="required">
             </div>
         </div>
 
@@ -83,7 +84,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">父节点ID</label>
             <div class="layui-input-block">
-                <input type="text" readonly name="parentId" autocomplete="off" class="layui-input" required>
+                <input type="text" readonly name="parentId" autocomplete="off" class="layui-input" lay-verify="required">
             </div>
         </div>
 
